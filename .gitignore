@@ -1,0 +1,9 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore environment files (if any)
+.env
+
+# Ignore build files (if using frameworks like React/Vite)
+dist/
+build/
