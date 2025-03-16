@@ -87,9 +87,24 @@ nav{
     
 }
 
+.block-left{
+    margin: auto 0;
+    margin-right: 40px;
+}
+.block-right{
+    margin: auto 0;
+    margin-right: 40px;
+}
 header a{
     padding: 20px 30px;
     margin: 0px 30px;
+    transition: 0.3s ease-in;
+    
+}
+header a:hover{
+    text-decoration: none;
+    color: var(--clr-primary-yellow);
+    
 }
 
 header .logo{
@@ -307,12 +322,7 @@ img{
     animation: animateleft 0.4s ease-in-out  forwards;
 }
 
-.card:nth-child(2){
-    animation-delay: 200ms;
-}
-.card:nth-child(3){
-    animation-delay: 400ms;
-}
+
 
 .hero h1, .hero span{
     animation-delay: 0.6s;
@@ -325,8 +335,19 @@ img{
 animation-delay:1s;
 }
 
-.services.show-up{
-    animation-delay:1.2s
+@media (min-width: 1921px)  {
+    .services.show-up{
+        animation-delay:1.2s
+    }
+    .card:nth-child(1){
+        animation-delay: 1.4s;
+    }
+    .card:nth-child(2){
+        animation-delay: 1.6s;
+    }
+    .card:nth-child(3){
+        animation-delay: 1.8s;
+    }
 }
 /****************/
 
@@ -334,6 +355,7 @@ animation-delay:1s;
 
 .btn{
     display: inline-block;
+    position: relative;
     color: var(--clr-primary-yellow);
     border: 2px solid var(--clr-primary-yellow);
     border-radius: 50px;
@@ -679,7 +701,7 @@ transition: filter 0.5s;
     bottom: -1px;
     background: linear-gradient(-2deg,rgba(153,153,153,0),rgba(255,255,255,0.5));
     border-radius: 50px; /* Slightly larger than .card */
-    z-index: -1;
+    z-index: -2;
 
 }
 
@@ -689,7 +711,7 @@ transition: filter 0.5s;
     inset: 0; /* Makes it match the card size */
     background: linear-gradient(-12deg, rgb(25, 25, 29), rgb(49, 49, 54)); 
     border-radius: 50px;
-    z-index: -1; /* Places it between the gradient border and content */
+    z-index: -2; /* Places it between the gradient border and content */
 }
 
 .contact-card h2, .contact-card p{
@@ -702,12 +724,10 @@ form{
     height: max-content;
     max-width: 720px;
     display: inline-block;
-border: blue 1px solid;
+position: relative;
 }
 
-form .btn{
-    display: block;
-}
+
 .contact-card .input-box{
     max-width: 720px;
     height: 50px;
@@ -723,14 +743,18 @@ form .btn{
     border: 1px solid var(--clr-neutral-bright-300);
     padding: 5px 20px;
     border-radius: 50px;
+    color: #fff;
 }
 .input-box textarea{
     width: 100%;
-    max-height: 140px;
+    min-height: 140px;
     background: transparent;
     border: none;
     outline: none;
     border: 1px solid var(--clr-neutral-bright-300);
     padding: 5px 20px;
     border-radius: 15px;
+    margin-bottom: var(--margin-200);
+        color: #fff;
+
 }
